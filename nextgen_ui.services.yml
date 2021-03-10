@@ -1,0 +1,11 @@
+services:
+  nextgen_ui.dashboard_manager:
+    class: Drupal\nextgen_ui\Dashboard\DashboardManager
+  theme.negotiator.nextgen_ui_theme:
+    class: Drupal\nextgen_ui\Theme\NextGenThemeNegotiator
+    arguments: ['@path.current', '@request_stack']
+    tags:
+      - { name: theme_negotiator, priority: 1 }
+  plugin.manager.nextgen_ui_app:
+    class: Drupal\nextgen_ui\NextgenUIAppManager
+    arguments: ['@module_handler', '@cache.discovery']

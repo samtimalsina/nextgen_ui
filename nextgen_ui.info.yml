@@ -1,0 +1,5 @@
+name: 'NextGen UI'
+type: module
+description: 'NextGen UI is an alternative UI for react specific apps in Drupal'
+core: 8.x
+package: 'NextGen UI'

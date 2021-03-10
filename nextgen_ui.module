@@ -1,0 +1,53 @@
+<?php
+
+use Drupal\Core\Extension\Exception\UnknownExtensionException;
+use Drupal\nextgen_ui\LibraryManager;
+/**
+ * Implements hook_page_top().
+ * @param array $page_top
+ */
+function nextgen_ui_page_top(array &$page_top)
+{
+  $current_theme = \Drupal::theme()->getActiveTheme()->getName();
+  if ($current_theme === 'nextgen_theme') {
+    unset($page_top['toolbar']);
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ * @param array $implementations
+ * @param string $hook
+ */
+function nextgen_ui_module_implements_alter(&$implementations, $hook)
+{
+  if ($hook == 'page_top' && isset($implementations['nextgen_ui'])) {
+    // Move our module's implementation of hook_page_top to the end of the list.
+    // We are doing this so that when our hook runs, the $page_top array is
+    // fully constructed.
+    $our_hook = $implementations['nextgen_ui'];
+    unset($implementations['nextgen_ui']);
+    $implementations['nextgen_ui'] = $our_hook;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function nextgen_ui_theme($existing, $type, $theme, $path)
+{
+  return [
+    'nextgen_ui_shell' => [
+      'variables' => ['header' => true]
+    ],
+  ];
+}
+
+/**
+ * Implements hook_library_info_build().
+ */
+function nextgen_ui_library_info_build()
+{
+  $libraries = LibraryManager::buildInfo('nextgen_ui');
+  return $libraries;
+}

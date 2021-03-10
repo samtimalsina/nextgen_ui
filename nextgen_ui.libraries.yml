@@ -1,0 +1,16 @@
+umdGlobals:
+  version: VERSION
+  js:
+    node_modules/react/umd/react.production.min.js: { }
+    node_modules/react-dom/umd/react-dom.production.min.js: { }
+
+register:
+  version: VERSION
+  js:
+    js/register.js: { }
+
+es-modules-shim:
+  version: VERSION
+  js:
+    js/es-module-shims-defaults.js: { }
+    https://unpkg.com/es-module-shims@0.10.1/dist/es-module-shims.js: { external: true, attributes: { defer: true } }

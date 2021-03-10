@@ -1,0 +1,10 @@
+name: 'Quick Nav'
+type: module
+description: 'Provides functionality for Quick Nav configuration'
+core: 8.x
+package: 'NextGen UI Apps'
+
+dependencies:
+  - nextgen_ui:nextgen_ui
+  - twc_ccs:twc_ccs
+  - twc_dsx_settings:twc_dsx_settings

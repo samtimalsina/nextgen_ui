@@ -1,0 +1,27 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "modules": false,
+      "targets": {
+        "esmodules": true
+      }
+    }],
+    "@babel/preset-typescript",
+    ["@babel/preset-react", {
+      "runtime": "classic"
+    }]
+  ],
+  "plugins": [
+    "@babel/plugin-external-helpers",
+    "@babel/plugin-proposal-class-properties",
+    ["@babel/plugin-transform-runtime", {
+      "regenerator": true,
+      "useESModules": true
+    }]
+  ],
+  "env": {
+    "development": {
+      "plugins": []
+    }
+  }
+}

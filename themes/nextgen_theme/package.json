@@ -1,0 +1,23 @@
+{
+  "name": "nextgen_theme",
+  "version": "1.0.0",
+  "entry": "app/index.jsx",
+  "module": "build/ui_shell.js",
+  "license": "MIT",
+  "scripts": {
+    "generate:html": "node ./app/generate.js"
+  },
+  "dependencies": {
+    "@carbon/icons": "^10.26.0",
+    "carbon-components": "^10.29.0",
+    "carbon-components-react": "^7.30.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "umdGlobals": {
+    "carbon-components": "CarbonComponents",
+    "@carbon/icons": "CarbonIcons"
+  }
+}

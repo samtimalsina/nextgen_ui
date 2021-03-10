@@ -1,0 +1,9 @@
+{
+  "name": "quick_nav",
+  "version": "1.0.0",
+  "entry": "app/index.tsx",
+  "main": "build/index.js",
+  "module": "build/quick_nav.mjs",
+  "license": "MIT",
+  "scripts": {}
+}

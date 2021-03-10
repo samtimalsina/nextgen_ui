@@ -1,0 +1,7 @@
+nextgen_ui.dashboard:
+  path: '/admin/nextgen_ui/dashboard'
+  defaults:
+    _controller: 'nextgen_ui.dashboard_manager:build'
+    _title: 'Nextgen UI Dashboard'
+  requirements:
+    _permission: 'use nextgen dashboard'

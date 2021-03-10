@@ -1,0 +1,53 @@
+{
+  "name": "nextgen_ui",
+  "version": "1.0.0",
+  "description": "Nextgen UI is an alternative React-based UI interface for Drupal administration screens",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "yarn": ">= 1.6",
+    "node": ">= 8.11"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.17",
+    "@babel/plugin-external-helpers": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@rollup/plugin-typescript": "^8.2.0",
+    "es-module-shims": "^0.9.0",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "read-pkg": "^5.2.0",
+    "rollup": "^2.39.0",
+    "rollup-plugin-esm-import-to-url": "^2.1.0",
+    "rollup-plugin-import-map": "^2.2.2",
+    "rollup-plugin-progress": "^1.1.2",
+    "tsc": "^1.20150623.0",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.5"
+  },
+  "scripts": {
+    "build:js": "rollup --config ./scripts/rollup/config.js",
+    "build:types": "tsc",
+    "build": "yarn run build:js && yarn run build:types",
+    "watch": "yarn run build:js --watch"
+  },
+  "workspaces": [
+    "modules/quick_nav",
+    "themes/nextgen_theme"
+  ]
+}

@@ -1,0 +1,5 @@
+name: 'Mobile Programming'
+type: module
+description: 'Provides functionality for Mobile Programming configuration'
+core: 8.x
+package: 'NextGen UI'

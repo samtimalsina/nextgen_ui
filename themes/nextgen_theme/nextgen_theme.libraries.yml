@@ -1,0 +1,6 @@
+ui_shell:
+  version: VERSION
+  js:
+    build/ui_shell.js: { attributes: { type: 'module-shim' } }
+  dependencies:
+    - nextgen_ui/es-modules-shim

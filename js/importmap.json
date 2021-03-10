@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "react": "https://esm.sh/[react,react-dom,prop-types,classnames]/react?dev",
+    "react-dom": "https://esm.sh/[react,react-dom,prop-types,classnames]/react-dom?dev",
+    "prop-types": "https://esm.sh/[react,react-dom,prop-types,classnames]/prop-types?dev",
+    "carbon-components": "https://unpkg.com/carbon-components@10.29.0/es/index.js",
+    "carbon-components-react": "https://unpkg.com/carbon-components-react@6.44.0/es/index.js",
+    "carbon-components-react/es/components/UIShell": "/modules/custom/nextgen_ui/node_modules/carbon-components-react/es/components/UIShell/index.js",
+    "class-names: "https://esm.sh/[react,react-dom,prop-types,classnames]/classnames"
+  }
+}

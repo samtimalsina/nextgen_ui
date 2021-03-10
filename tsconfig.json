@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    // Ensure that .d.ts files are created by tsc, but not .js files
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true,
+    "outDir": "build",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "lib": ["es5", "dom"],
+    "rootDirs":["modules/quick_nav/app", "themes/nextgen_theme/app"]
+  },
+  "include": ["modules/**/*", "themes/**/*"],
+  "exclude": ["node_modules"]
+}
